@@ -5,7 +5,8 @@ import image from "./homei3.jpg"
 const Home = () => {
     const mystyle = {
         color: "white",
-        margin: "auto",
+        margin: "auto"
+        ,marginTop:"40px",
         backgroundColor: "black",
         padding: "10px",
         fontFamily: "Arial",
@@ -16,9 +17,10 @@ const Home = () => {
         flexDirection:"row",
         marginTop:"50px"
         ,marginLeft:"220px"
+        ,marginBottom:"40px"
     }
 const backg={
-    background:"linear-gradient(to right, white,#e9f5f8, #5fc3ef)"
+    background:"linear-gradient(to bottom, white,#5fc3ef, white)"
 
 }
 
@@ -33,13 +35,13 @@ const backg={
                 </div>
                 <div class="carousel-inner" >
                     <div class="carousel-item active">
-                        <img src="/assets/images/home/img1.jpg" class="d-block w-100" alt="IPhone" height="500px"/>
+                        <img src="/assets/images/home/img3.jpg" class="d-block w-100" alt="IPhone" height="500px"/>
     </div>
                         <div class="carousel-item">
                             <img src="/assets/images/home/img2.jpg" class="d-block w-100" alt="IPhone" height="500px"/>
     </div>
                             <div class="carousel-item">
-                                <img src="/assets/images/home/img3.jpg" class="d-block w-100" alt="IPhone" height="500px"/>
+                                <img src="/assets/images/home/img1.jpg" class="d-block w-100" alt="IPhone" height="500px"/>
     </div>
                             <div class="carousel-item">
                                 <img src="/assets/images/home/img4.jpg" class="d-block w-100" alt="IPhone" height="500px"/>
