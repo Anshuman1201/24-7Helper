@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const About = () => {
     const backg={
-        background:"linear-gradient(to right, white,#e9f5f8, #5fc3ef)"
+        background:"linear-gradient(to bottom, white,#5fc3ef, white)"
     
     }
     return (
@@ -13,7 +13,9 @@ const About = () => {
                     <div className="col-md-6">
                         <h1 className="text-primary fw-bold mb-4">About Us</h1>
                         <p className="lead mb-4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo molestiae earum rem doloremque, nihil delectus ullam error consectetur? Dicta, non exercitationem in consectetur totam dolorum at voluptate laudantium aliquam, officiis perspiciatis molestias reiciendis consequuntur ullam perferendis velit blanditiis distinctio assumenda a maxime reprehenderit atque. Nam eius rerum distinctio, a illo earum, optio molestias nostrum maxime quibusdam delectus, adipisci impedit? Nam corporis reiciendis minus quod eaque, laborum veritatis voluptatibus id maiores tempore accusantium recusandae perspiciatis, officia cum ad maxime fuga repellendus a magni consequatur. Unde adipisci hic provident est sint corporis, dolorem esse autem soluta molestiae optio quisquam eligendi obcaecati minima?
+                        24*7 Helper is the perfect place to turn to for<br/> all your Apartment, Villa, Office and<br/> beyond requirements — from setting up new<br/> build projects to maintenance help.<br/> We provide first-rate, reliable service<br/> to Residential and Commercial sectors. <br/>Your satisfaction is our commitment!<br/>
+
+We take pride in delivering<br/> services rendered by professionals who have been verified and qualified. We offer a wide range of services, including plumbing, electrical work, painting, carpentry,
                         </p>
                         <NavLink to="/contact" className="btn btn-outline-primary px-3">Contact Us</NavLink>
                     </div>
