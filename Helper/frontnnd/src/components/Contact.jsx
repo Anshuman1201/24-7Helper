@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
     const backg={
-        background:"linear-gradient(to right, white,#e9f5f8, #5fc3ef)"
+        background:"linear-gradient(to bottom, white,#5fc3ef, white)"
     
     }
     return (
@@ -42,3 +42,4 @@ const Contact = () => {
 }
 
             export default Contact
+
