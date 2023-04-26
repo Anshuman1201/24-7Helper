@@ -6,23 +6,7 @@ import DATA from '../Data'
 
 const Product = () => {
 
-    // const [DATA, setDATA] = useState([]);
-    // useEffect(() => {
-    //     getData();
-    // }, []);
-    // // async function getData(event) {
-    // //     event.preventDefault();
-    // //     console.log("login function working");
-    // //     const response = await fetch("http://localhost:3000/carpenter", {
-    // //         method: "GET",
-    // //         headers: {
-    // //             "Content-Type": "application/json",
-    // //         },
-    // //     });
 
-    // //     const data = await response.json();
-    // //     setDATA(data)
-    // // }
     const mystyle={
         display:"flex",
         flexDirection:"row",
@@ -36,10 +20,10 @@ const Product = () => {
        
         return (
             
-            <div class="card my-5 py-4" key={item.id} style={backg}>
+            <div class="card my-3 py-4" key={item.id} style={backg}>
                 <img src={item.img} class="card-img-top" alt={item.title} />
-                <div class="card-body text-center">
-                    <h5 class="card-title">{item.title}</h5>
+                <div className="card-body text-center">
+                    <h5 className="card-title">{item.title}</h5>
                     <p className="lead">${item.price}</p>
                     <NavLink to={`/products/${item.id}`} class="btn btn-outline-primary">Buy Now</NavLink>
                 </div>
