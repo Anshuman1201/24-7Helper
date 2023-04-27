@@ -1,47 +1,60 @@
-import React from 'react'
-import { useParams } from 'react-router'
-import { useState,useEffect } from 'react';
-import DATA from '../Data';
-import { useDispatch } from 'react-redux';
-import {addItem, delItem} from '../redux/actions/index'
-import './ProductDetail.css';
-import SocialCard from './SocialCard';
+// import React from 'react'
+// import { useParams } from 'react-router'
+// import { useState, useEffect } from 'react';
+// import DATA from '../Data';
+// import { useDispatch } from 'react-redux';
+// import { addItem, delItem } from '../redux/actions/index'
+// import './ProductDetail.css';
+// import SocialCard from './SocialCard';
+// import './SocialCard.css'
+// import Axios from 'axios';
 
-const ProductDetail = () => {
-   
-const [users,setusers]=useState([]);
+// const ProductDetail = () => {
 
-useEffect(()=>{
-(async ()=>{
-let userData;
-try{
-    const response=await fetch('https://randomuser.me/api/?results=6');
-     userData=(await response.json()).results;
+//     const [users, setusers] = useState([]);
+
     
-}
-catch(error){
-    console.log(error);
-    userData=[];
-}
-setusers(userData);
-})();
-},[]);
+//     useEffect(() => {
+//         async function getPropertyList() {
+//             try {
+//                 const res = await Axios.get("http://localhost:5000/carpenter");
+//                 setusers(res.data);
+//                 console.log();
+
+//             } catch (err) {
+//                 console.log(err);
+//             }
+//         };
+//         getPropertyList();
+//     }, []);
 
 
 
 
 
-    return (
-        <div >
-     
- {users.map((user,index)=>(
-            <SocialCard userData={user} key={index}/>
-        )) }
+
+//     return (
+    
 
 
-        
-        </div>
-    )
-}
+//         <div className=''>
+//             {
+//                 users && users.list[0].map((user) => {
+//                     return (
+//                         <div >
+//                             <div className="card_title"> {user.carp_name} </div>
+//                             <div className="card_body">
+//                                 <div className='card_data'><h5><b>Phone no. : </b></h5>{user.carp_desc} </div>
+//                                 <div className="card_image">{user.carp_price}</div>
+//                             </div>
+//                         </div >
+//                     )
+//                 })
+//             }
+//         </div>
 
-export default ProductDetail
+
+//     )
+// }
+
+// export default ProductDetail

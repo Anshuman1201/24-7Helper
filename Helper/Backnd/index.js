@@ -42,6 +42,7 @@ app.post("/login",async (request,response)=>{
 
 app.get("/carpenter",async (request,response)=>{
     var list = await carpenterModel.listCarpenter().catch(status=>response.json({status}));
+    console.log(list);
     response.json({list})
 })
 

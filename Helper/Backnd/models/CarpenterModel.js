@@ -20,7 +20,7 @@ class CarpenterModel {
         return new Promise(async resolve => {
             var result = await db.query(`select * from carpenters`)
                 .catch(err => resolve({ status: false, msg: err.message  }));
-            resolve(result)
+            resolve(result[0])
         })
     }
 }

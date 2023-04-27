@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import DATA from '../Data'
+import './ProductDetail.css'
 
 
 const Product = () => {
@@ -14,18 +15,15 @@ const Product = () => {
     }
     const backg={
         background:"linear-gradient(to right, white,#e9f5f8, #5fc3ef)"
-    ,width:"40%"
+    ,width:"30%"
     }
     const cardItem = (item) => {
-       
         return (
-            
             <div class="card my-3 py-4" key={item.id} style={backg}>
                 <img src={item.img} class="card-img-top" alt={item.title} />
                 <div className="card-body text-center">
                     <h5 className="card-title">{item.title}</h5>
-                    <p className="lead">${item.price}</p>
-                    <NavLink to={`/products/${item.id}`} class="btn btn-outline-primary">Buy Now</NavLink>
+                    <NavLink to={`/products/${item.id}`} class="btn btn-outline-primary m-auto">See more</NavLink>
                 </div>
             </div>
         );
@@ -36,20 +34,10 @@ const Product = () => {
     return (
         <div>
             <div className="container py-5">
-                <div className="row">
-                    <div className="col-12 text-center">
-                        <h1>Call-Us for Hiring</h1>
-                        <hr />
-                    </div>
-                    <div style={mystyle} ><div><b>EMERGENCY PLUMBING<br/>
-                         CARPENTER,PAINTER</b><br/>
-                         We’re open 24/7/365 because<br/>
-                         Plumbing, Carpenter, Painter, Electrician, etc<br/>
-                         emerencies don’t wait ...</div>
-                         
-                         <div style={{marginLeft:"600px"}}><img src="/assets/images/home/divBack.jpeg" alt="" /></div>
-                         </div>
-
+                
+                <div className='we'>
+                    <h3>COMPLETE PROPERTY CONSTRUCTION, MAINTENANCE AND REPAIRING SOLUTIONS</h3>
+                    <p>We Construct, We Maintain, We Refurbish , We are the Helpers</p>
                 </div>
             </div>
             <div className="container">

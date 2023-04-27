@@ -1,6 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Signup = () => {
+    const [user_name, setUsername] = useState("")
+    const [phone_no, setPhoneNo] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
+    async function signupUser(event) {
+        event.preventDefault();
+        console.log("signup  function working");
+        const response = await fetch("http://localhost:5000/signup", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                user_name,
+                phone_no,
+                email,
+                password,
+            }),
+        });
+        const data = await response.json();
+        console.log(data);
+    }
+
     return (
         <div>
             {/* <!-- Button trigger modal --> */}
@@ -13,29 +37,38 @@ const Signup = () => {
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">Login</h5>
+                            <h5 className="modal-title" id="exampleModalLabel">Register</h5>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
-                            <button className="btn btn-primary w-100 mb-4">
-                                <span className="fa fa-google me-2"></span> Sign up With Google
-                            </button>
-                            <button className="btn btn-primary w-100 mb-4">
-                                <span className="fa fa-facebook me-2"></span> Sign up With Facebook
-                            </button>
-                            <form>
+                            <form onClick={signupUser}>
                                 <div className="mb-3">
                                     <label htmlFor="exampleInput" className="form-label">Username</label>
-                                    <input type="text" className="form-control" id="exampleInput" />
+                                    <input type="text" className="form-control" id="exampleInput"
+                                        onChange={(e) => {
+                                            setUsername(e.target.value)
+                                        }} />
+                                </div>
+                                <div className="mb-3">
+                                    <label htmlFor="exampleInput" className="form-label">Phone no</label>
+                                    <input type="text" className="form-control" id="exampleInput"
+                                        onChange={(e) => {
+                                            setPhoneNo(e.target.value)
+                                        }} />
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                        onChange={(e) => {
+                                            setEmail(e.target.value)
+                                        }} />
                                     <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                                    <input type="password" className="form-control" id="exampleInputPassword1" />
+                                    <input type="password" className="form-control" id="exampleInputPassword1" onChange={(e) => {
+                                        setPassword(e.target.value)
+                                    }} />
                                 </div>
                                 <div className="mb-3 form-check">
                                     <input type="checkbox" className="form-check-input" id="exampleCheck1" />
